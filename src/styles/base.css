@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Reusable glass panel */
+.panel {
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-panel);
+  backdrop-filter: var(--blur-panel);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border: 1px solid var(--color-panel-border);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.04);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition:
+    background var(--duration-fast),
+    border-color var(--duration-fast),
+    transform var(--duration-fast) var(--ease-out),
+    opacity var(--duration-fast);
+}
+
+.btn:hover:not(:disabled) {
+  background: rgb(244 210 122 / 0.12);
+  border-color: rgb(244 210 122 / 0.5);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn--gold {
+  border: none;
+  background: var(--gradient-gold);
+  background-size: 200% 200%;
+  color: #2a1a06;
+  font-weight: 700;
+}
+
+.btn--gold:hover:not(:disabled) {
+  background: var(--gradient-gold);
+  background-size: 200% 200%;
+  animation: shimmer 1.6s linear infinite;
+  box-shadow: var(--shadow-glow);
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

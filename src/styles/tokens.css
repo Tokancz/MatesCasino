@@ -1,0 +1,40 @@
+:root {
+  /* Palette */
+  --color-bg: #0b0709;
+  --color-text: #f6efe2;
+  --color-text-dim: #b9ab95;
+  --color-gold: #f4d27a;
+  --color-gold-deep: #c99a3b;
+  --color-red: #c62a3a;
+  --color-black: #1b1b20;
+  --color-green: #12814a;
+  --color-danger: #ff5c6c;
+
+  --color-panel: rgb(20 12 14 / 0.72);
+  --color-panel-solid: #1a1113;
+  --color-panel-border: rgb(244 210 122 / 0.22);
+
+  --gradient-gold: linear-gradient(135deg, #fff1bf 0%, #f4d27a 35%, #c99a3b 70%, #f4d27a 100%);
+
+  /* Typography */
+  --font-display: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Shape & depth */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-panel: 0 12px 40px rgb(0 0 0 / 0.45), inset 0 1px 0 rgb(255 255 255 / 0.04);
+  --shadow-glow: 0 0 24px rgb(244 210 122 / 0.45);
+  --blur-panel: blur(14px) saturate(140%);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 160ms;
+  --duration-base: 280ms;
+  --duration-slow: 520ms;
+
+  /* Layout */
+  --hud-gap: clamp(10px, 1.6vw, 20px);
+}
